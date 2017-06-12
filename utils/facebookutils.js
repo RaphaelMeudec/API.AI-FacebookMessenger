@@ -5,7 +5,7 @@ var apiai = require('apiai')
 var api = apiai(config.apiaitoken);
 
 
-var handleFacebookTextMessage(event) {
+var handleFacebookTextMessage = function(event) {
     var question = event.message.text;
     var sender_id = event.sender.id;
     var recipient_id = event.recipient.id;
