@@ -1,6 +1,6 @@
 const config = {}
 
-config.apiaitoken = 'apiai token'
+config.apiaitoken = 'd86be6cb43d74cd7aa748002d083f024'
 
 config.facebook = {
     verification_token : '123456789123',
