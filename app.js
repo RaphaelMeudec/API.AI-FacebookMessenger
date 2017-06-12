@@ -12,7 +12,7 @@ var api = apiai(config.apiaitoken);
 
 // Import our own webhook functions
 var apiaiUtils = require('./utils/apiaiutils.js');
-var facebookWebhook = require('./utils/facebookutils.js');
+var facebookUtils = require('./utils/facebookutils.js');
 
 // Define port
 app.set('port', (process.env.PORT || 5000));
@@ -42,7 +42,7 @@ app.post('/facebook', json_body_parser, function(req, response) {
             pageEntry.messaging.forEach(messagingEvent => {
                 if (messagingEvent.message) {
                     if (!messagingEvent.message.is_echo) {
-                        botHandler.handleMessage(messagingEvent, "Facebook");
+                        facebookUtils.handleFacebookTextMessage(messagingEvent);
                     }
                 }
             })
