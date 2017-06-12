@@ -1,0 +1,24 @@
+{
+  "name": "api.ai-facebookmessenger",
+  "version": "1.0.0",
+  "description": "Example of webhook between Facebook Messenger and API.AI",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaelmeudec/API.AI-FacebookMessenger.git"
+  },
+  "keywords": [
+    "API.AI",
+    "FacebookMessenger",
+    "Webhook"
+  ],
+  "author": "Raphael Meudec",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphaelmeudec/API.AI-FacebookMessenger/issues"
+  },
+  "homepage": "https://github.com/raphaelmeudec/API.AI-FacebookMessenger#readme"
+}
