@@ -11,7 +11,7 @@ var apiai = require('apiai');
 var api = apiai(config.apiaitoken);
 
 // Import our own webhook functions
-var apiaiWebhook = require('./utils/apiaiutils.js');
+var apiaiUtils = require('./utils/apiaiutils.js');
 var facebookWebhook = require('./utils/facebookutils.js');
 
 // Define port
