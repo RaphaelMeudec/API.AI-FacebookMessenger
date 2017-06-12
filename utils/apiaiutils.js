@@ -1,5 +1,10 @@
-
-
+function formatApiaiResponse(speech, displayText, source="heroku") {
+    return {
+        "speech": speech,
+        "displayText": displayText,
+        "source": source
+    }
+}
 
 
 var fulfillmentRequest = function(request, response) {
@@ -10,9 +15,12 @@ var fulfillmentRequest = function(request, response) {
         console.log('Valid fulfillment request received.');
         var action = body.result.action;
         var parameters = body.result.parameters;
-        // switch(body.result.action) {
-        //
-        // }
+        switch(body.result.action) {
+            case 'guess.name':
+                var json = formatApiaiResponse(speech='Your name is Bill.', displayText='Your name is Bill.')
+                response.json(json);
+                break;
+        }
     }
 }
 
