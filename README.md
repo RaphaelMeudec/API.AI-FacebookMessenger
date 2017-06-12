@@ -47,7 +47,7 @@ return response.json({
 })
 ```
 
-<b>Note</b>: This example hasn't been implemented in the code. Moreover, getting value from a database shouldn't be done asynchronously.
+<b>Note</b>: This example hasn't been implemented in the code. Moreover, getting value from a database should be done asynchronously.
 
 
 ## Useful links
