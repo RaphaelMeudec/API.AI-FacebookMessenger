@@ -35,19 +35,21 @@ app.get('/facebook', json_body_parser, function(request, response) {
 
 // Webhook for Facebook - handle message requests
 app.post('/facebook', json_body_parser, function(req, response) {
-    response.sendStatus(200);
     const data = req.body;
+    console.log('hello');
     if (data.object === "page") {
         data.entry.forEach(pageEntry => {
             pageEntry.messaging.forEach(messagingEvent => {
                 if (messagingEvent.message) {
                     if (!messagingEvent.message.is_echo) {
+                        console.log('world');
                         facebookUtils.handleFacebookTextMessage(messagingEvent);
                     }
                 }
             })
         })
     }
+    response.sendStatus(200);
 })
 
 // Webhook for API.AI -  request for a fulfillment
