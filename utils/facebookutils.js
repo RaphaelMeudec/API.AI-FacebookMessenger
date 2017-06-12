@@ -21,13 +21,13 @@ var handleFacebookTextMessage = function(event) {
             var text = response_bot.result.fulfillment.speech;
             var action = response_bot.result.action;
 
-            facebook.replyMessage(sender_id, response_bot.result.fulfillment);
+            replyMessage(sender_id, response_bot.result.fulfillment);
         });
 
         req_bot.on('error', function(error_bot) {
             console.log("Couldn't answer the question");
             console.log(error_bot);
-            facebook.replyMessage(sender_id, 'Une erreur est survenue. Un opérateur va prendre le relais d\'ici peu.');
+            replyMessage(sender_id, 'Une erreur est survenue. Un opérateur va prendre le relais d\'ici peu.');
         })
 
         req_bot.end();
