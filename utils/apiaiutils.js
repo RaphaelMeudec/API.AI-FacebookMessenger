@@ -1,8 +1,8 @@
-var formatApiaiResponse = function(speech, displayText, source="heroku") {
+function formatApiaiResponse(speech, displayText) {
     return {
         "speech": speech,
         "displayText": displayText,
-        "source": source
+        "source": "heroku"
     }
 }
 

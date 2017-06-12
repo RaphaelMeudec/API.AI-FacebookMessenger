@@ -1,5 +1,5 @@
 var request = require('request');
-var config = require('./config.js').getConfig();
+var config = require('../config.js').getConfig();
 
 var apiai = require('apiai')
 var api = apiai(config.apiaitoken);
