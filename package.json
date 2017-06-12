@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/raphaelmeudec/API.AI-FacebookMessenger/issues"
   },
-  "homepage": "https://github.com/raphaelmeudec/API.AI-FacebookMessenger#readme"
+  "homepage": "https://github.com/raphaelmeudec/API.AI-FacebookMessenger#readme",
+  "dependencies": {
+    "apiai": "^4.0.2",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "request": "^2.81.0"
+  }
 }
