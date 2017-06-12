@@ -17,7 +17,7 @@ Sometimes, a static response from the bot is not enough. For example, if you wan
 1. On the API.AI dashboard, in the fulfillment section, click enable and add the url address (we will use something similar to the previous facebook url, such as stark-escarpment-XXXXX.herokuapp.com/apiai).
 2. Add an intent as usual in your bot on API.AI. You can also import my zip file into your API.AI account. It contains an intent responded by the server.
 3. At the bottom of this intent, in the fulfillment part, click "Use Webhook"
-4. Now is the time to configure our back-end to handle that kind of requests. On app.js, add a get handler for apiai/
+4. Now is the time to configure our back-end to handle that kind of requests. On app.js, add a handler for apiai/
 
 ```javascript
 // Webhook for API.AI -  request for a fulfillment
@@ -47,10 +47,12 @@ return response.json({
 })
 ```
 
-Note: This is a sample example, and you should obviously make sure every argument is defined.
+<b>Note</b>: This example hasn't been implemented in the code. Moreover, getting value from a database shouldn't be done asynchronously.
 
 
-<b>Useful links</b>
+## Useful links
 
 Facebook Webhook : https://developers.facebook.com/docs/graph-api/webhooks  
-API.AI fulfillment : https://docs.api.ai/docs/webhook
+API.AI fulfillment : https://docs.api.ai/docs/webhook  
+Set up an Heroku application : https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction  
+Interesting API.AI project from forum : https://discuss.api.ai/t/food-delivery-bot-v2-lots-of-fixes/3478
