@@ -10,6 +10,10 @@ var config = require('./config.js').getConfig();
 var apiai = require('apiai');
 var api = apiai(config.apiaitoken);
 
+// Import our own webhook functions
+var apiaiWebhook = require('utils/apiaiutils.js');
+var facebookWebhook = require('utils/facebookutils.js');
+
 // Define port
 app.set('port', (process.env.PORT || 5000));
 
@@ -44,6 +48,12 @@ app.post('/facebook', json_body_parser, function(req, response) {
             })
         })
     }
+})
+
+// Webhook for API.AI -  request for a fulfillment
+app.post('/apiai', json_body_parser, function(request, response) {
+    // API.AI requires help for a customized question
+    apiaiUtils.fulfillmentRequest(request, response);
 })
 
 // Launching server
